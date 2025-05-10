@@ -1,0 +1,38 @@
+# Unity auto-generated files
+/Library/
+/Temp/
+/Logs/
+[Bb]uild/
+[Bb]uilds/
+[Uu]ser[Ss]ettings/
+
+# Visual Studio and IDE files
+.vs/
+.vs/Amaze/
+*.suo
+*.VC.db
+*.opendb
+*.pidb
+*.userprefs
+*.user
+*.sln
+*.csproj
+
+# Packages & Dependencies (unless manually needed)
+Packages/
+app.config
+packages.config
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Ignore test results but keep test scripts
+Amaze/TestResults.xml
+Amaze/MemoryCaptures/
+Amaze/Logs/
+
+# Keep test scripts
+!Amaze/Tests/
