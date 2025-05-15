@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|c:\\users\\ddyla\\source\\repos\\learner062022\\amaze\\amaze\\assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|c:\\users\\ddyla\\source\\repos\\learner062022\\amaze\\amaze\\assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -53,12 +57,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SceneLoader.cs",
+              "DocumentMoniker": "C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\Assets\\Scripts\\SceneLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneLoader.cs",
+              "ToolTip": "C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\Assets\\Scripts\\SceneLoader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SceneLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T04:53:04.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PlayerControl.cs",
               "DocumentMoniker": "C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\Assets\\Scripts\\PlayerControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl.cs",
               "ToolTip": "C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\Assets\\Scripts\\PlayerControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T01:27:33.662Z",
               "EditorCaption": ""
