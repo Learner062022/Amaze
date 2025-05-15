@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|c:\\users\\ddyla\\source\\repos\\learner062022\\amaze\\amaze\\assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|c:\\users\\ddyla\\source\\repos\\learner062022\\amaze\\amaze\\assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|c:\\users\\ddyla\\source\\repos\\learner062022\\amaze\\amaze\\assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03EFB937-BA75-B005-221D-2144549E445B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,7 +28,7 @@
         },
         {
           "DockedWidth": 74,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,8 +55,16 @@
               "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SceneLoader.cs",
               "DocumentMoniker": "C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\Assets\\Scripts\\SceneLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SceneLoader.cs",
@@ -69,24 +77,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PlayerControl.cs",
               "DocumentMoniker": "C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\Assets\\Scripts\\PlayerControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl.cs",
               "ToolTip": "C:\\Users\\ddyla\\source\\repos\\Learner062022\\Amaze\\Amaze\\Assets\\Scripts\\PlayerControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwCYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T01:27:33.662Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
