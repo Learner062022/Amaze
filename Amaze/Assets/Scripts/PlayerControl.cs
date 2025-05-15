@@ -9,10 +9,8 @@ public class PlayerControl : MonoBehaviour
     CharacterController characterController;
     Vector3 inputVector;
 
-    void Start()
-    {
+    void Start() =>
         characterController = GetComponent<CharacterController>();
-    }
 
     void Update()
     {
