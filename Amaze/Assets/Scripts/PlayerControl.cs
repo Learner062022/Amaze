@@ -1,46 +1,70 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    [Header("Movement")]
-    public float moveSpeed = 8f;
-    public float gravity = -20f;
     CharacterController characterController;
-    Vector3 inputVector;
 
-
-    [Header("Looking")]
+    [Header("Camera & Looking")]
     public Transform lookCamera;
     public float sensitivityX = 15f;
     public float sensitivityY = 15f;
-
-    public float minY = -90;
-    public float maxY = 90;
-
+    public float minY = -90f;
+    public float maxY = 90f;
     float currentYRotation;
-    Vector2 aimVector;
 
-    void Start()
-    {
+    [Header("Movement")]
+    public float moveSpeed = 8f;
+    public float gravity = -20f;
+
+    [Header("Shooting")]
+    public float shootRange = 500f;
+    public LayerMask shootMask;
+    public float fireRate = 0.5f;
+    bool firing = false;
+
+    Vector2 aimVector;
+    Vector3 inputVector;
+    bool fire;
+
+    void Start() {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
     }
-        
-    void Update()
-    {
+
+    void Update() {
         GetInput();
         Move();
         Look();
+        Shoot();
     }
 
-    void GetInput()
-    {
+    public void Shoot() {
+        if (firing) return;
+
+        if (Physics.Raycast(lookCamera.position, lookCamera.forward, out RaycastHit hit, shootRange, shootMask))
+        {
+            //Debug.DrawLine(lookCamera.position, hit.point, Color.red, 2);
+            //Debug.Log("Hit: " + hit.collider.name);
+        }
+
+        StartCoroutine(FireRoutine());
+    }
+
+    IEnumerator FireRoutine() {
+        firing = true;
+        yield return new WaitForSeconds(fireRate);
+        firing = false;
+    }
+
+    void GetInput() {
         inputVector.x = Input.GetAxis("Horizontal");
-        inputVector.y = Input.GetAxis("Vertical");
+        inputVector.z = Input.GetAxis("Vertical"); 
         aimVector.x = Input.GetAxis("Mouse X");
         aimVector.y = Input.GetAxis("Mouse Y");
+        fire = Input.GetButtonDown("Fire1");
     }
 
     void Move()
