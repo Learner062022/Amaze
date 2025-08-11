@@ -61,7 +61,12 @@ public class PlayerControl : MonoBehaviour
 
     void GetInput() {
         inputVector.x = Input.GetAxis("Horizontal");
-        inputVector.z = Input.GetAxis("Vertical"); 
+        inputVector.z = Input.GetAxis("Vertical");
+
+        if (inputVector.magnitude > 1) {
+            inputVector.Normalize();
+        }
+
         aimVector.x = Input.GetAxis("Mouse X");
         aimVector.y = Input.GetAxis("Mouse Y");
         fire = Input.GetButtonDown("Fire1");
