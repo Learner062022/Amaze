@@ -1,38 +1,62 @@
-# Unity auto-generated files
-/Library/
-/Temp/
-/Logs/
+# =========================
+# Unity Auto-Generated Files
+# =========================
+[Ll]ibrary/
+[Tt]emp/
+[Ll]ogs/
 [Bb]uild/
 [Bb]uilds/
 [Uu]ser[Ss]ettings/
+MemoryCaptures/
 
-# Visual Studio and IDE files
-.vs/
-.vs/Amaze/
-*.suo
-*.VC.db
-*.opendb
-*.pidb
-*.userprefs
-*.user
-*.sln
-*.csproj
+# =========================
+# Unity Package Management
+# =========================
+Packages/PackageCache/
+!Packages/manifest.json
+!Packages/packages-lock.json
+*.unitypackage
 
-# Packages & Dependencies (unless manually needed)
-Packages/
-app.config
-packages.config
-
-# Builds
+# =========================
+# Build Artifacts
+# =========================
 *.apk
 *.aab
-*.unitypackage
 *.app
+*.exe
+*.dll
+*.dmp
 
-# Ignore test results but keep test scripts
+# =========================
+# IDE and Editor Files
+# =========================
+.vs/
+.vs/Amaze/
+.idea/
+*.sln
+*.sln.iml
+*.csproj
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.VC.db
+*.opendb
+
+# =========================
+# OS-Specific Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Test Results and Logs
+# =========================
+TestResults/
 Amaze/TestResults.xml
-Amaze/MemoryCaptures/
 Amaze/Logs/
 
-# Keep test scripts
+# =========================
+# Keep Test Scripts
+# =========================
 !Amaze/Tests/
