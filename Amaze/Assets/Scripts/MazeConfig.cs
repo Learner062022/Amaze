@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
@@ -11,45 +9,9 @@ namespace Assets.Scripts
     /// </summary>
     public class MazeConfig : MonoBehaviour
     {
-        // Will incorporate following after achieving the simplest form of recursive backtracker: 
-        // float loopDensity;
-        // float randomizationFactor;
-        // float branchingBias;
-        // float deadEndPruningRate;
-        // int seed;
-
-        public Vector2Int MapSize = new(31, 31);
-
         public static MazeConfig Instance { get; private set; }
 
-        int selectedDifficultyIndex = 0;
-
-        /// <summary>
-        /// Maps difficulty levels to maze generation algorithms. 
-        /// Will incorporate other difficulties and algorithms 
-        /// after achieving simplest recursive backtracker.
-        /// </summary>
-        readonly List<(string name, string algorithm)> mazeDifficulty = new()
-        {
-            ("Easy", "RecursiveBacktracker"),
-            ("Medium", "Prims"),
-            ("Hard", "Kruskal"),
-            ("Expert", "HuntAndKill"),
-            ("Insane", "RecursiveDivision")
-        };
-       
-        public List<(string, string)> MazeDifficulty => mazeDifficulty;
-
-        public int SelectedDifficultyIndex
-        {
-            set
-            {
-                if (selectedDifficultyIndex != value)
-                    selectedDifficultyIndex = value;
-            }
-
-            get => selectedDifficultyIndex;
-        }
+        public string SelectedAlgorithm => mazeDifficulty[selectedDifficultyIndex].algorithm;
 
         void Awake()
         {
@@ -61,6 +23,34 @@ namespace Assets.Scripts
 
             Instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+
+        [SerializeField]
+        float mazeHeight;
+
+        public float MazeHeight => mazeHeight;
+
+        int selectedDifficultyIndex = 0;
+
+        readonly List<(string name, string algorithm)> mazeDifficulty = new()
+        {
+            ("Easy", "RecursiveBacktracker"),
+            ("Medium", "Prims"),
+            ("Hard", "Kruskal"),
+            ("Expert", "HuntAndKill"),
+            ("Insane", "RecursiveDivision")
+        };
+
+        public int SelectedDifficultyIndex
+        {
+            get => selectedDifficultyIndex;
+            set
+            {
+                if (selectedDifficultyIndex != value)
+                {
+                    selectedDifficultyIndex = value;
+                }
+            }
         }
     }
 }
