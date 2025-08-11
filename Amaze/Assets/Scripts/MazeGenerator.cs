@@ -1,57 +1,59 @@
-using Assets.Scripts;
-using PlasticPipe.PlasticProtocol.Messages;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Scripts;
 using UnityEngine;
 
 /// <summary>
-/// Generates the maze using parameters from MazeConfig.
-/// Responsible for applying the selected algorithm and building the maze structure.
+/// Generates the maze grid and triggers rendering based on configuration.
 /// </summary>
 public class MazeGenerator : MonoBehaviour
 {
+    [SerializeField]
+    GameObject floor;
+
+    [SerializeField]
     MazeConfig mazeConfig;
+
+    MazeCell[,] mazeGrid;
+
+    Vector3 posFloor;
+    Vector3 scaleFloor;
     Vector3 mazeOrigin;
-    GameObject mazeRoot;
 
-    public MazeGenerator(MazeConfig mazeConfig)
+    public MazeCell[,] MazeGrid
     {
-        // now can access the 2D array tracking the visited/unvisited cells
-        this.mazeConfig = mazeConfig; 
+        get => mazeGrid;
+        set => mazeGrid = value;
+    }
 
-        // Maze is built on top of an existing plane in the scene
-        // Plane acts as the floor; no need to instantiate floor prefabs
-        Transform transform = mazeConfig.Floor.transform;
-        Vector3 posFloor = transform.position;
-        Vector3 scaleFloor = transform.localScale;
+    void Awake()
+    {
+        posFloor = floor.transform.position;
+        scaleFloor = transform.localScale;
+    }
 
-        // Maze origin is calculated from plane position and scaled dimensions
-        // Maze is centered on the plane using offset based on width and height
-        mazeOrigin = new Vector3(
+    void Start()
+    {
+        // TODO: Calculate maze grid dimensions using floor scale and MazeConfig settings (e.g., cell size or maze height)
+
+        mazeOrigin = new(
             (posFloor.x * scaleFloor.x) - 0.5f,
             0,
             (posFloor.z * scaleFloor.z) - 0.5f
-            );
+        );
+
+        // TODO: Store mazeOrigin or pass it to MazeRenderer for correct cell placement
     }
 
-    
-    // Notes:
-    
-    
-    
-    // - Each cell's position is offset from origin using cell size
-    // - Walls are instantiated as children of a single parent GameObject ("MazeRoot")
-    // - Adjacent cells must share wall reference to allow proper removal
-    // - Wall prefabs are positioned with vertical offset to sit above the plane
-    // - Directional logic is used to navigate grid and remove walls between cells
-    // - Final maze structure is a single GameObject containing all remaining walls
-
-    void Start() {
-        
+    void Update()
+    {
+        // TODO: Add runtime logic if needed (e.g., debug input or regeneration triggers)
     }
 
-    void Update() {
-
+    public void GenerateMaze()
+    {
+        // TODO: Retrieve selected maze algorithm name from MazeConfig
+        // TODO: Initialize mazeGrid with MazeCell instances based on calculated dimensions
+        // TODO: Use selected algorithm to carve paths and update wall flags in mazeGrid
+        // TODO: Ensure walls are removed between connected cells based on path carving
+        // TODO: Send mazeGrid and mazeOrigin to MazeRenderer for visual instantiation
     }
 }
