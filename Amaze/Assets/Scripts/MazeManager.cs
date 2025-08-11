@@ -1,26 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace Assets.Scripts
+public class MazeManager : MonoBehaviour
 {
-    /// <summary>
-    /// Domain-specific controller that manages maze-related UI interactions, 
-    /// updates maze configuration, and triggers maze generation based on user input.
-    /// </summary>
-    public class MazeManager : MonoBehaviour
-    {
-        void Awake()
-        {
-            
-        }
+    [SerializeField]
+    Dropdown difficultyDropdown;
 
-        void Start()
-        {
-            
-        }
+    [SerializeField]
+    MazeGenerator generator;
+
+    [SerializeField]
+    MazeConfig configurator;
+
+    // TODO (Inspector): Assign difficultyDropdown and generator in inspector
+    // TODO (Config): Assign MazeConfig.Instance to configurator for centralized settings
+
+    void Awake()
+    {
+        // TODO (Config): Assign MazeConfig.Instance to configurator for centralized settings
+    }
+
+    void Start()
+    {
+        // TODO (UI Setup): Populate dropdown options using config.GetMazeDifficulties() or similar accessor
+        // TODO (UI Setup): Set dropdown value to config.SelectedDifficultyIndex
+        // TODO (UI Setup): Refresh dropdown UI to reflect current selection
+        // TODO (UI Setup): Add listener to difficultyDropdown to handle selection changes
+        // TODO (Maze Init): Call generator.GenerateMaze() when difficulty is changed or on initial load
+    }
+
+    void OnDifficultyChanged(int index)
+    {
+        // TODO (Config Update): Update config.SelectedDifficultyIndex with new value
+        // TODO (Maze Update): Regenerate maze using updated configuration
+        // TODO (Rendering): Needs to trigger MazeRenderer to render maze after generation
     }
 }
